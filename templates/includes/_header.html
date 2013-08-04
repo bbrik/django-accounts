@@ -8,17 +8,20 @@
   </p>
 
   <ul class="unstyled inline">
-    <li>
-      <a href="{% url 'accounts:login' %}">Login</a>
-    </li>
-    <li>
-      <a href="{% url 'accounts:logout' %}">Logout</a>
-    </li>
-    <li>
-      <a href="{% url 'accounts:password_change' %}">Password Change</a>
-    </li>
-    <li>
-      <a href="{% url 'accounts:password_reset' %}">Password Reset</a>
-    </li>
+    {% if user.is_authenticated %}
+      <li>
+        <a href="{% url 'accounts:logout' %}">Logout</a>
+      </li>
+      <li>
+        <a href="{% url 'accounts:password_change' %}">Password Change</a>
+      </li>
+    {% else %}
+      <li>
+        <a href="{% url 'accounts:login' %}">Login</a>
+      </li>
+      <li>
+        <a href="{% url 'accounts:password_reset' %}">Password Reset</a>
+      </li>
+    {% endif %}
   </ul>
 </div>
