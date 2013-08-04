@@ -6,6 +6,9 @@
       <span class="help-inline">
         {% for error in field.errors %}
           {{ error|escape }}
+          {% if not forloop.last %}
+            <br>
+          {% endif %}
         {% endfor %}
       </span>
     {% endif %}

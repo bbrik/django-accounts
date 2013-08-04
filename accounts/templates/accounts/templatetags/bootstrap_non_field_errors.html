@@ -1,7 +1,7 @@
 {% if form.non_field_errors %}
   <div class="alert alert-error">
     {% for error in form.non_field_errors %}
-      {{ error }}
+      {{ error|escape }}
       {% if not forloop.last %}
         <br>
       {% endif %}
