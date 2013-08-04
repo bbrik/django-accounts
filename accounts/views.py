@@ -34,7 +34,8 @@ def password_change(request):
     )
 
 
-@msg_success_redirect(_(u'Um email foi enviado com instruções de como recuperar sua senha.'))
+@msg_success_redirect(_(u'Um email foi enviado para sua conta '
+                        u'com instruções de como recuperar sua senha.'))
 def password_reset(request):
     return auth_views.password_reset(
         request,
@@ -43,7 +44,7 @@ def password_reset(request):
     )
 
 
-@msg_success_redirect(_(u'Senha alterada com sucesso.'))
+@msg_success_redirect(_(u'Senha redefinida com sucesso.'))
 def password_reset_confirm(request, uidb36, token):
     return auth_views.password_reset_confirm(
         request,
