@@ -1,4 +1,9 @@
-# Django settings for accounts_proj project.
+# -*- coding: utf-8 -*-
+
+from unipath import Path
+
+
+PROJECT_ROOT = Path(__file__).ancestor(2)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -11,13 +16,12 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
-        # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'accounts',
+        'USER': 'bbrik',
+        'PASSWORD': 'p0stgr3s',
+        'HOST': '',
+        'PORT': '5433',
     }
 }
 
@@ -108,9 +112,7 @@ ROOT_URLCONF = 'accounts_proj.urls'
 WSGI_APPLICATION = 'accounts_proj.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    PROJECT_ROOT.child('templates')
 )
 
 INSTALLED_APPS = (
@@ -120,6 +122,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
