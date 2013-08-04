@@ -1,0 +1,18 @@
+<div class="container">
+  <p>
+    {% if user.is_authenticated %}
+      User: {{ user.username }}
+    {% else %}
+      anonimo
+    {% endif %}
+  </p>
+
+  <ul class="unstyled inline">
+    <li>
+      <a href="{% url 'accounts:login' %}">Login</a>
+    </li>
+    <li>
+      <a href="{% url 'accounts:logout' %}">Logout</a>
+    </li>
+  </ul>
+</div>

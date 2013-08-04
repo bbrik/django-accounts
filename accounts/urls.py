@@ -11,4 +11,9 @@ urlpatterns = patterns('',
         view=views.login,
         name='login'
     ),
+    url(
+        regex=r'^logout/$',
+        view=views.logout,
+        name='logout'
+    ),
 )
