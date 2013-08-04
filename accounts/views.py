@@ -2,10 +2,9 @@
 
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import views as auth_views
-from django.contrib import messages
 from django.conf import settings
 
-from .base import resolve_url_for_config, is_redirect
+from .base import resolve_url_for_config, msg_success_redirect
 
 
 ACCOUNTS_BASE_TEMPLATE = getattr(settings, 'ACCOUNTS_BASE_TEMPLATE', 'base.html')
@@ -25,13 +24,10 @@ def logout(request):
                              next_page=LOGOUT_REDIRECT_URL)
 
 
+@msg_success_redirect(_(u'Senha alterada com sucesso.'))
 def password_change(request):
-    response = auth_views.password_change(
+    return auth_views.password_change(
         request,
         post_change_redirect=PASSWORD_CHANGE_REDIRECT,
         extra_context=EXTRA_CONTEXT,
     )
-    if is_redirect(response):
-        msg = _(u'Senha alterada com sucesso.')
-        messages.success(request, msg)
-    return response
