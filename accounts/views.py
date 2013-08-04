@@ -25,7 +25,7 @@ def logout(request):
                              next_page=LOGOUT_REDIRECT_URL)
 
 
-@msg_success_redirect(_(u'Senha alterada com sucesso.'))
+@msg_success_redirect(PASSWORD_CHANGE_REDIRECT, _(u'Senha alterada com sucesso.'))
 def password_change(request):
     return auth_views.password_change(
         request,
@@ -34,7 +34,8 @@ def password_change(request):
     )
 
 
-@msg_success_redirect(_(u'Um email foi enviado para sua conta '
+@msg_success_redirect(PASSWORD_RESET_REDIRECT,
+                      _(u'Um email foi enviado para sua conta '
                         u'com instruções de como recuperar sua senha.'))
 def password_reset(request):
     return auth_views.password_reset(
@@ -44,7 +45,7 @@ def password_reset(request):
     )
 
 
-@msg_success_redirect(_(u'Senha redefinida com sucesso.'))
+@msg_success_redirect(PASSWORD_RESET_REDIRECT, _(u'Senha redefinida com sucesso.'))
 def password_reset_confirm(request, uidb36, token):
     return auth_views.password_reset_confirm(
         request,

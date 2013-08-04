@@ -13,7 +13,7 @@ def resolve_url_for_config(name):
     return None
 
 
-def msg_success_redirect(msg):
+def msg_success_redirect(success_url, msg):
     """
     Decorator para msg de success se a resposta da view for redirect.
 
@@ -21,7 +21,8 @@ def msg_success_redirect(msg):
     def decorator(view_func):
         def wrapped(request, *args, **kwargs):
             response = view_func(request, *args, **kwargs)
-            if type(response) is HttpResponseRedirect:
+            if type(response) is HttpResponseRedirect and \
+                            response['location'] == success_url:
                 messages.success(request, msg)
             return response
         return wrapped
