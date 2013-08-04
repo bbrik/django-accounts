@@ -13,6 +13,12 @@ def resolve_url_for_config(name):
     return None
 
 
+ACCOUNTS_BASE_TEMPLATE = getattr(settings, 'ACCOUNTS_BASE_TEMPLATE', 'base.html')
+LOGOUT_REDIRECT_URL = resolve_url_for_config('LOGOUT_REDIRECT_URL') or '/'
+PASSWORD_CHANGE_REDIRECT_URL = resolve_url_for_config('PASSWORD_CHANGE_REDIRECT_URL') or '/'
+PASSWORD_RESET_REDIRECT_URL = resolve_url_for_config('PASSWORD_RESET_REDIRECT_URL') or '/'
+
+
 def msg_success_redirect(success_url, msg):
     """
     Decorator para msg de success se a resposta da view for redirect.

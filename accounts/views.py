@@ -2,19 +2,15 @@
 
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import views as auth_views
-from django.conf import settings
 
-from .base import resolve_url_for_config, msg_success_redirect
+from .base import msg_success_redirect, ACCOUNTS_BASE_TEMPLATE, LOGOUT_REDIRECT_URL, \
+    PASSWORD_CHANGE_REDIRECT_URL, PASSWORD_RESET_REDIRECT_URL
 
 
-ACCOUNTS_BASE_TEMPLATE = getattr(settings, 'ACCOUNTS_BASE_TEMPLATE', 'base.html')
 EXTRA_CONTEXT = {
     'accounts_base': ACCOUNTS_BASE_TEMPLATE,
 }
 
-LOGOUT_REDIRECT_URL = resolve_url_for_config('LOGOUT_REDIRECT_URL') or '/'
-PASSWORD_CHANGE_REDIRECT_URL = resolve_url_for_config('PASSWORD_CHANGE_REDIRECT_URL') or '/'
-PASSWORD_RESET_REDIRECT_URL = resolve_url_for_config('PASSWORD_RESET_REDIRECT_URL') or '/'
 
 MESSAGES = {
     'password_change': _(u'Senha alterada com sucesso.'),
