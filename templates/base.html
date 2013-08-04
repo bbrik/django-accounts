@@ -8,6 +8,10 @@
         {{ title }}
       {% endblock title %}
     </title>
+
+    {% block stylesheets %}
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    {% endblock stylesheets %}
   </head>
 
   <body>
