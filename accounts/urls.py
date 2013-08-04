@@ -21,4 +21,9 @@ urlpatterns = patterns('',
         view=views.password_change,
         name='password_change'
     ),
+    url(
+        regex=r'^password-reset/$',
+        view=views.password_reset,
+        name='password_reset'
+    ),
 )

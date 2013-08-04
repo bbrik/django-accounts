@@ -13,6 +13,7 @@ EXTRA_CONTEXT = {
 }
 LOGOUT_REDIRECT_URL = resolve_url_for_config('LOGOUT_REDIRECT_URL') or '/'
 PASSWORD_CHANGE_REDIRECT = resolve_url_for_config('PASSWORD_CHANGE_REDIRECT') or '/'
+PASSWORD_RESET_REDIRECT = resolve_url_for_config('PASSWORD_RESET_REDIRECT') or '/'
 
 
 def login(request):
@@ -29,5 +30,13 @@ def password_change(request):
     return auth_views.password_change(
         request,
         post_change_redirect=PASSWORD_CHANGE_REDIRECT,
+        extra_context=EXTRA_CONTEXT,
+    )
+
+
+def password_reset(request):
+    return auth_views.password_reset(
+        request,
+        post_reset_redirect=PASSWORD_RESET_REDIRECT,
         extra_context=EXTRA_CONTEXT,
     )
