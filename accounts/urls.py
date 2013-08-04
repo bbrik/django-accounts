@@ -16,4 +16,9 @@ urlpatterns = patterns('',
         view=views.logout,
         name='logout'
     ),
+    url(
+        regex=r'^password-change/$',
+        view=views.password_change,
+        name='password_change'
+    ),
 )
