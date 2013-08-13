@@ -8,7 +8,7 @@ or reset, it sets a message on the request and redirects to a specified path,
 ``/`` by default.
 
 It provides templates that render forms using bootstrap markup.
-They extend ``base.html`` by default and expect a blocks ``title`` and ``content``.
+They extend ``base.html`` by default and expect blocks ``title`` and ``content``.
 
 
 ============
