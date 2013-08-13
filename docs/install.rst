@@ -20,9 +20,9 @@ Installing django-bbrik
     pip install git+ssh://git@github.com/bbrik/django-accounts.git
 
 #. Install messages middleware to your project if it is not installed already,
- please see django documentation
+please see django documentation
 
-#. Add ``bbrik`` to your ``INSTALLED_APPS`` in settings.py::
+#. Add ``accounts`` to your ``INSTALLED_APPS`` in settings.py::
 
     INSTALLED_APPS = (
         ...
@@ -39,30 +39,6 @@ Installing django-bbrik
 
 Usage
 ~~~~~
-
-Settings
-********
-
-ACCOUNTS_BASE_TEMPLATE
-++++++++++++++++++++++
-
-Sets the base template name. Default is ``base.html``.
-
-LOGOUT_REDIRECT_URL
-+++++++++++++++++++
-
-Sets url to redirect on logout, can be a view name. Default is ``/``.
-
-PASSWORD_CHANGE_REDIRECT_URL
-++++++++++++++++++++++++++++
-
-Sets url to redirect on password change, can be a view name. Default is ``/``.
-
-PASSWORD_RESET_REDIRECT_URL
-+++++++++++++++++++++++++++
-
-Sets url to redirect on password reset, can be a view name. Default is ``/``.
-
 
 Adding links in your templates
 ******************************
@@ -83,3 +59,25 @@ Use the following urls on your templates::
     </a>
 
 
+Custom settings
+***************
+
+ACCOUNTS_BASE_TEMPLATE
+++++++++++++++++++++++
+
+Sets the base template name. Default is ``base.html``.
+
+LOGOUT_REDIRECT_URL
++++++++++++++++++++
+
+Sets url to redirect on logout, can be a view name. Default is ``/``.
+
+PASSWORD_CHANGE_REDIRECT_URL
+++++++++++++++++++++++++++++
+
+Sets url to redirect on password change, can be a view name. Default is ``/``.
+
+PASSWORD_RESET_REDIRECT_URL
++++++++++++++++++++++++++++
+
+Sets url to redirect on password reset, can be a view name. Default is ``/``.
