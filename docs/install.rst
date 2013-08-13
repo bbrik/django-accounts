@@ -2,10 +2,13 @@
 Description
 ===========
 
-This library extends the built-in views in ``django.contrib.auth.views``.
+This app extends the built-in views in ``django.contrib.auth.views``.
 Instead of providing a page specific to tell the user his password has been changed
 or reset, it sets a message on the request and redirects to a specified path,
-``/`` by default
+``/`` by default.
+
+It provides templates that render forms using bootstrap markup.
+They extend ``base.html`` by default and expect a blocks ``title`` and ``content``.
 
 
 ============
