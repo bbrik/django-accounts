@@ -15,8 +15,8 @@ They extend ``base.html`` by default and expect blocks ``title`` and ``content``
 Installation
 ============
 
-Installing django-bbrik
-~~~~~~~~~~~~~~~~~~~~~~~
+Installing django-accounts
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Install using pip::
 
