@@ -20,7 +20,7 @@ Installing django-accounts
 
 #. Install using pip::
 
-    pip install git+ssh://git@github.com/bbrik/django-accounts.git
+    pip install git+https://github.com/bbrik/django-accounts.git 
 
 #. Install messages middleware to your project if it is not installed already,
 please see django documentation
