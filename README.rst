@@ -20,19 +20,23 @@ Installing django-accounts
 
 #. Install using pip::
 
-    pip install git+ssh://git@github.com/bbrik/django-accounts.git
+    pip install git+https://github.com/bbrik/django-accounts.git 
 
 #. Install messages middleware to your project if it is not installed already,
 please see django documentation
 
-#. Add ``accounts`` to your ``INSTALLED_APPS`` in settings.py::
+#. Add ``accounts`` to your ``INSTALLED_APPS`` in settings.py:
+
+.. code-block:: python
 
     INSTALLED_APPS = (
         ...
         'accounts',
     )
 
-#. Import ``accounts.urls`` in your global ``urls.py``::
+#. Import ``accounts.urls`` in your global ``urls.py``:
+
+.. code-block:: python
 
     urlpatterns = patterns('',
         url(r'^accounts/', include('accounts.urls', namespace='accounts')),
@@ -46,7 +50,9 @@ Usage
 Adding links in your templates
 ******************************
 
-Use the following urls on your templates::
+Use the following urls on your templates:
+
+.. code-block:: html
 
     <a href="{% url 'accounts:login' %}">
       Login
