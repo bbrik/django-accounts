@@ -10,7 +10,7 @@ setup(
     version=accounts.__version__,
     author=u'Bernardo Brik',
     author_email='bernardobrik@gmail.com',
-    url='http://bitbucket.org/bruno/django-geoportail',
+    url='https://github.com/bbrik/django-accounts',
     description='Simple registration with bootstrap forms',
     include_package_data=True,
     zip_safe=False,
