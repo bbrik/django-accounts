@@ -61,12 +61,12 @@ class AccountsViewsTestCase(TestCase):
         response = self.client.post(url, data={'email': 'steve@gmail.com'})
         self.check_redirect_to_url(response, PASSWORD_RESET_REDIRECT_URL)
         self.assertEquals(len(mail.outbox), 1)
-        # acha url no texto da mensagem
+        # find url message text
         message = mail.outbox[0]
         match = URL_RE.search(message.body)
         url = match.group(0)
-        path = urlparse(url).path[:-1] # remove aspas do final da url
-        # testa redefinição de senha
+        path = urlparse(url).path[:-1] # remove last " from end of url
+        # test set new password
         response = self.client.post(path, data={'new_password1': '67890',
                                                 'new_password2': '67890'})
         self.check_redirect_to_url(response, PASSWORD_RESET_REDIRECT_URL)
