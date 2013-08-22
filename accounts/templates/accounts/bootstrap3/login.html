@@ -9,18 +9,22 @@
 
 {% block content %}
   <div class="container">
-    <form role="form" action="" method="post">
-      {% csrf_token %}
+    <div class="row">
+      <div class="col-md-6">
+        <form role="form" action="" method="post">
+          {% csrf_token %}
 
-      <fieldset>
-        <legend>{% trans 'Login' %}</legend>
-        {% bootstrap_field form.username %}
-        {% bootstrap_field form.password %}
-      </fieldset>
+          <fieldset>
+            <legend>{% trans 'Login' %}</legend>
+            {% bootstrap_field form.username %}
+            {% bootstrap_field form.password %}
+          </fieldset>
 
-      {% bootstrap_non_field_errors form %}
+          {% bootstrap_non_field_errors form %}
 
-      <button class="btn btn-primary">{% trans 'Login' %}</button>
-    </form>
+          <button class="btn btn-primary">{% trans 'Login' %}</button>
+        </form>
+      </div>
+    </div>
   </div>
 {% endblock content %}
