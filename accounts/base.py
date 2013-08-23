@@ -17,6 +17,7 @@ ACCOUNTS_BASE_TEMPLATE = getattr(settings, 'ACCOUNTS_BASE_TEMPLATE', 'base.html'
 LOGOUT_REDIRECT_URL = resolve_url_for_config('LOGOUT_REDIRECT_URL', '/')
 PASSWORD_CHANGE_REDIRECT_URL = resolve_url_for_config('PASSWORD_CHANGE_REDIRECT_URL', '/')
 PASSWORD_RESET_REDIRECT_URL = resolve_url_for_config('PASSWORD_RESET_REDIRECT_URL', '/')
+ACCOUNTS_TEMPLATE_PACK = getattr(settings, 'ACCOUNTS_TEMPLATE_PACK', 'bootstrap2')
 
 
 def msg_success_redirect(success_url, msg):
@@ -35,3 +36,6 @@ def msg_success_redirect(success_url, msg):
         return wrapped
     return decorator
 
+
+def get_full_template_name(name):
+    return 'accounts/%s/%s' % (ACCOUNTS_TEMPLATE_PACK, name)
