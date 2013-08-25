@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-25 20:35-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: accounts/views.py:18
+msgid "Senha alterada com sucesso."
+msgstr ""
+
+#: accounts/views.py:19
+msgid "Um email foi enviado para sua conta com instruções de como recuperar sua senha."
+msgstr ""
+
+#: accounts/views.py:21
+msgid "Senha redefinida com sucesso."
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/login.html:7
+#: accounts/templates/accounts/bootstrap2/login.html:16
+#: accounts/templates/accounts/bootstrap2/login.html:24
+#: accounts/templates/accounts/bootstrap3/login.html:7
+#: accounts/templates/accounts/bootstrap3/login.html:18
+#: accounts/templates/accounts/bootstrap3/login.html:25
+msgid "Login"
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/password_change_form.html:7
+#: accounts/templates/accounts/bootstrap2/password_change_form.html:16
+#: accounts/templates/accounts/bootstrap2/password_change_form.html:25
+#: accounts/templates/accounts/bootstrap3/password_change_form.html:7
+#: accounts/templates/accounts/bootstrap3/password_change_form.html:18
+#: accounts/templates/accounts/bootstrap3/password_change_form.html:26
+msgid "Alterar Senha"
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/password_reset_confirm.html:7
+#: accounts/templates/accounts/bootstrap2/password_reset_confirm.html:17
+#: accounts/templates/accounts/bootstrap2/password_reset_confirm.html:25
+#: accounts/templates/accounts/bootstrap3/password_reset_confirm.html:7
+#: accounts/templates/accounts/bootstrap3/password_reset_confirm.html:19
+#: accounts/templates/accounts/bootstrap3/password_reset_confirm.html:26
+msgid "Redefinir Senha"
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/password_reset_confirm.html:30
+#: accounts/templates/accounts/bootstrap3/password_reset_confirm.html:32
+msgid "Este link é inválido, provavelmente já foi utilizado."
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/password_reset_confirm.html:31
+#: accounts/templates/accounts/bootstrap3/password_reset_confirm.html:33
+msgid "Por favor peça um novo link para recuperar senha."
+msgstr ""
+
+#: accounts/templates/accounts/bootstrap2/password_reset_form.html:7
+#: accounts/templates/accounts/bootstrap2/password_reset_form.html:16
+#: accounts/templates/accounts/bootstrap2/password_reset_form.html:23
+#: accounts/templates/accounts/bootstrap3/password_reset_form.html:7
+#: accounts/templates/accounts/bootstrap3/password_reset_form.html:18
+#: accounts/templates/accounts/bootstrap3/password_reset_form.html:24
+msgid "Recuperar Senha"
+msgstr ""
+
+#: accounts/templates/registration/password_reset_email.html:8
+msgid "Foi realizado um pedido de recuperação de senha para a sua conta em nosso site."
+msgstr ""
+
+#: accounts/templates/registration/password_reset_email.html:12
+msgid "Siga o link abaixo para recuperar sua senha"
+msgstr ""
+
+#: accounts/templates/registration/password_reset_subject.txt:1
+msgid "Recuperar senha"
+msgstr ""
