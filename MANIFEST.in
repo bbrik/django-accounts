@@ -2,3 +2,4 @@ include MANIFEST.in
 recursive-include accounts/templates *
 recursive-include accounts/templatetags *
 recursive-include accounts/tests *
+recursive-include accounts/locale *
