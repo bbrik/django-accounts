@@ -80,7 +80,7 @@ msgid "Foi realizado um pedido de recuperação de senha para a sua conta em nos
 msgstr ""
 
 #: accounts/templates/registration/password_reset_email.html:12
-msgid "Siga o link abaixo para recuperar sua senha"
+msgid "Siga o link para recuperar sua senha"
 msgstr ""
 
 #: accounts/templates/registration/password_reset_subject.txt:1
