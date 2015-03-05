@@ -62,10 +62,10 @@ def password_reset(request):
 
 
 @msg_success_redirect(PASSWORD_RESET_REDIRECT_URL, MESSAGES['password_reset_confirm'])
-def password_reset_confirm(request, uidb36, token):
+def password_reset_confirm(request, uidb64, token):
     return auth_views.password_reset_confirm(
         request,
-        uidb36=uidb36,
+        uidb64=uidb64,
         token=token,
         post_reset_redirect=PASSWORD_RESET_REDIRECT_URL,
         extra_context=EXTRA_CONTEXT,
