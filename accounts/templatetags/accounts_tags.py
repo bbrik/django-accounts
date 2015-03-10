@@ -10,6 +10,7 @@ register = Library()
 
 @register.simple_tag()
 def bootstrap_field(field):
+    field.field.widget.attrs['class'] = 'form-control'
     template_name = get_full_template_name('templatetags/field.html')
     template = loader.get_template(template_name)
     context = Context({

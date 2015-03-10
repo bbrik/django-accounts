@@ -2,11 +2,21 @@
 
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.forms import (
+    AuthenticationForm,
+    PasswordChangeForm, 
+    PasswordResetForm, 
+    SetPasswordForm,
+)
 
-from .base import msg_success_redirect, ACCOUNTS_BASE_TEMPLATE, LOGOUT_REDIRECT_URL, \
-    PASSWORD_CHANGE_REDIRECT_URL, PASSWORD_RESET_REDIRECT_URL, get_full_template_name
-from .forms import AuthenticationForm, PasswordChangeForm, PasswordResetForm, \
-    SetPasswordForm
+from .base import (
+    msg_success_redirect, 
+    ACCOUNTS_BASE_TEMPLATE, 
+    LOGOUT_REDIRECT_URL,
+    PASSWORD_CHANGE_REDIRECT_URL,
+    PASSWORD_RESET_REDIRECT_URL, 
+    get_full_template_name
+)
 
 
 EXTRA_CONTEXT = {
